@@ -1,0 +1,117 @@
+
+
+/*
+    Crit: Make margins more consistent
+*/
+
+body {
+background-color: #9999A1;
+font-family: 'Varela Round', sans-serif;
+
+margin: 0 5%;
+}
+
+a:link { color: #5A189A; }
+a:visited { color: #1F0835; }
+a:focus { color: #8A799B; }
+a:hover { color: #8A799B; }
+a:active { color: #E6E6E9; }
+
+/*Set up nav a:link and the other pseudoclasses to have specific styles for the navbar, to make it act like buttons*/
+
+main {
+    display: grid;
+    grid:
+        "header header" 50px
+        "navbar navbar" 50px
+        "image projects" 400px
+        "personalinfo projects" 1fr
+        /400px 1fr;
+}
+
+header {
+    grid-area: header;
+
+    text-align: center;
+    margin-bottom: -50px;
+    padding-top: 0.1em;
+
+    background-color: #7A599E;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+nav {
+    grid-area: navbar;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    background-color: #7A599E;
+    border: 1px solid #000;
+}
+
+.navItem {    
+    min-width: 100px;
+    text-align: center;
+    line-height: 50px;
+    
+    border-right: 1px solid #000;
+}
+
+#Image {
+    grid-area: image;
+
+    margin: 10px 10px 10px 0;
+}
+
+#SelfPortrait {
+    border: 2px solid #000;
+}
+
+img {
+    max-width: 100%;
+}
+
+#PersonalInfo {
+    grid-area: personalinfo;
+
+    margin: 10px 10px 10px 0;
+}
+
+#Projects {
+    grid-area: projects;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.project {
+    margin: 10px 0;
+
+    background-color: #7A599E;
+    border: 1px solid #000;
+}
+
+.project h2 {
+    margin: 10px;
+}
+
+.project p {
+    margin: 10px;
+}
+
+.projectImage { 
+    float: left;
+    margin: 0 10px 10px;
+}
+
+footer {
+    grid-area: footer;
+}

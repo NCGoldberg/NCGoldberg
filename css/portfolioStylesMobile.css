@@ -1,0 +1,35 @@
+/*only add style rules that differ from the portfolio on mobile vs desktop*/
+@media screen and (max-width: 1000px) { /*This might get triggered on small monitors as well, but I'm not sure of a better way to do
+                                          this since the horizontal pixel resolution of phone screens is surprisingly large*/
+
+    main {
+        display: grid;
+        grid:
+            "header" 50px
+            "navbar" min-content
+            "projects" 1fr
+            /100%;
+
+        font-size: x-large; /*Ideally should make it easier to read on smaller screens*/
+    }
+
+    .navItem
+    {
+        line-height: 1.5em;
+    }
+
+    #Contents
+    {
+        display: none;
+    }
+
+    .portfolioItem {
+        margin-left: -10px;
+    }
+
+    .portfolioItem h2 {
+        position: static;
+    }
+
+    /*Maybe consider switching out the images in the portfolioItems, but it's not completely necessary*/
+}

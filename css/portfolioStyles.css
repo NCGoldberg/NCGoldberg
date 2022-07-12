@@ -1,0 +1,255 @@
+/* TODO: formatting is broken, fix it lol */
+/*
+    Colors: 
+    #000 ---- Black
+    #1F0835 - Russian Violet
+    #5A189A - Purple
+    #7A599E - Royal Purple
+    #8A799B - Rhythm
+    #9999A1 - Manatee
+    #E6E6E9 - Platinum
+    #F4F4F6 - Cultured
+    Link to palette: https://coolors.co/000000-1f0835-5a189a-7a599e-8a799b-9999a1-e6e6e9-f4f4f6
+*/
+
+/* styles from home page */
+/* TODO: combine homepage styles with portfolio styles */
+body {
+    background-color: #9999A1;
+    font-family: 'Varela Round', sans-serif;
+
+    margin: 0 5%;
+}
+
+a:link {
+    color: #5A189A;
+}
+
+a:visited {
+    color: #1F0835;
+}
+
+a:focus {
+    color: #8A799B;
+}
+
+a:hover {
+    color: #8A799B;
+}
+
+a:active {
+    color: #E6E6E9;
+}
+
+/*Set up nav a:link and the other pseudoclasses to have specific styles for the navbar, to make it act like buttons*/
+
+main {
+    display: grid;
+    grid:
+        "header header" 50px "navbar navbar" 50px "image projects" 400px "personalinfo projects" 1fr /400px 1fr;
+}
+
+header {
+    grid-area: header;
+
+    text-align: center;
+    margin-bottom: -50px;
+    padding-top: 0.1em;
+
+    background-color: #7A599E;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+nav {
+    grid-area: navbar;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    background-color: #7A599E;
+    border: 1px solid #000;
+}
+
+.navItem {
+    min-width: 100px;
+    text-align: center;
+    line-height: 50px;
+
+    border-right: 1px solid #000;
+}
+
+#Image {
+    grid-area: image;
+
+    margin: 10px 10px 10px 0;
+}
+
+#SelfPortrait {
+    border: 2px solid #000;
+}
+
+img {
+    max-width: 100%;
+}
+
+#PersonalInfo {
+    grid-area: personalinfo;
+
+    margin: 10px 10px 10px 0;
+}
+
+#Projects {
+    grid-area: projects;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project {
+    margin: 10px 0;
+
+    background-color: #7A599E;
+    border: 1px solid #000;
+}
+
+.project h2 {
+    margin: 10px;
+}
+
+.project p {
+    margin: 10px;
+}
+
+.projectImage {
+    float: left;
+    margin: 0 10px 10px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+main {
+    display: grid;
+    grid:
+        "header header" 50px "navbar navbar" 50px "contents projects" 1fr /12vw 1fr;
+}
+
+/*Header and Navbar are already placed in the grid from baseStyles.css*/
+/* { border: 1px dotted black; } /**/
+
+#Contents {
+    grid-area: contents;
+    position: sticky;
+    top: 50px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+
+    max-width: 200px;
+    height: 100vh;
+
+    background-color: #7A599E;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.contentsItem {
+    display: flex;
+    /*Using Flexbox to center the text vertically regardless of how many lines there are*/
+    flex-direction: column;
+    justify-content: center;
+
+    height: 2rem;
+
+    line-height: 100%;
+
+    border-bottom: 1px solid black;
+}
+
+#Tagline {
+
+    text-align: center;
+    font-size: larger;
+    font-weight: 500;
+
+    margin-top: -0.7rem;
+    padding-bottom: 10px;
+}
+
+#PortfolioItems {
+    grid-area: projects;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    margin: 0 0 0 10px;
+}
+
+#ImageAndContact {
+    clear: left;
+    float: left;
+}
+
+#ImageAndContact img {
+    margin: 10px;
+}
+
+#ImageAndContact h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+#ImageAndContact p {
+    margin: 10px;
+}
+
+.portfolioItem {
+    margin: 10px 0;
+    background-color: #7A599E;
+    border: 1px solid #000;
+}
+
+.portfolioItem h2 {
+    position: sticky;
+    top: 50px;
+
+    text-align: center;
+    line-height: 40px;
+
+    margin-top: 0px;
+    margin-bottom: -1px;
+
+    background-color: #7A599E;
+    border-bottom: 1px solid #000;
+}
+
+.portfolioItem img {
+    float: left;
+
+    margin: 10px;
+
+    border: 1px solid #000;
+}
+
+.portfolioItem p {
+    margin: 10px;
+}
+
+.imageStackLeft {
+    float: left;
+
+    display: flex;
+    flex-direction: column;
+}
