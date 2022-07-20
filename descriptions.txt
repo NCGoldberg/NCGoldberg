@@ -1,0 +1,4 @@
+this is a list of descriptions for the projects
+
+Snake 3D
+This is an extension of the classic game of "Snake" into the third dimension. The game is played in a first person perspective, and the player turns the snake with the arrow keys. The play area is surrounded by walls, and shadows are cast onto them by both the snake and the food, which helps the player navigate to it even if they can't see the food in their view.
