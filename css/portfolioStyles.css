@@ -46,7 +46,11 @@ a:active {
 main {
     display: grid;
     grid:
-        "header header" 50px "navbar navbar" 50px "image projects" 400px "personalinfo projects" 1fr /400px 1fr;
+        "header header" 50px
+        "navbar navbar" 50px
+        "image projects" 400px
+        "personalinfo projects"
+        1fr /400px 1fr;
 }
 
 header {
