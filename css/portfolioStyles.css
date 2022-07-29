@@ -43,16 +43,6 @@ a:active {
 
 /*Set up nav a:link and the other pseudoclasses to have specific styles for the navbar, to make it act like buttons*/
 
-main {
-    display: grid;
-    grid:
-        "header header" 50px
-        "navbar navbar" 50px
-        "image projects" 400px
-        "personalinfo projects"
-        1fr /400px 1fr;
-}
-
 header {
     grid-area: header;
 
@@ -64,21 +54,6 @@ header {
     border-left: 1px solid #000;
     border-right: 1px solid #000;
     border-bottom: 2px solid #000;
-}
-
-nav {
-    grid-area: navbar;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
-
-    background-color: #7A599E;
-    border: 1px solid #000;
 }
 
 .navItem {
@@ -143,7 +118,7 @@ footer {
 main {
     display: grid;
     grid:
-        "header header" 50px "navbar navbar" 50px "contents projects" 1fr /12vw 1fr;
+        "header header" 50px "contents projects" 1fr /12vw 1fr;
 }
 
 /*Header and Navbar are already placed in the grid from baseStyles.css*/
@@ -171,11 +146,50 @@ main {
     /*Using Flexbox to center the text vertically regardless of how many lines there are*/
     flex-direction: column;
     justify-content: center;
+    
+    padding-left: 0.5rem;
 
     height: 2rem;
 
     line-height: 100%;
 
+    border-bottom: 1px solid black;
+}
+.contentsCategory {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+
+    border-bottom: 1px solid black;
+}
+
+.contentsCategory>a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-left: 2rem;
+
+    height: 2rem;
+
+    line-height: 100%;
+    
+    border-bottom: 1px solid black;
+}
+
+/* change the style of the first item in a contentsCategory */
+.contentsCategory>a:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    padding-left: 0.5rem;
+    
+    height: 2rem;
+
+    line-height: 100%;
+    
     border-bottom: 1px solid black;
 }
 
